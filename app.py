@@ -18,15 +18,15 @@ from statsmodels.tsa.api import SimpleExpSmoothing, Holt #pacchetto per fare pre
 import dash_bootstrap_components as dbc #per impaginazione
 
 #puntatore alla cartella
-folder_raws = "C:\\Users\\Francesco\\Desktop\\DeployWithRender\\src\\"
+#folder_raws = "C:\\Users\\Francesco\\Desktop\\DeployWithRender\\src\\"
 #DataFrame degli scenari
-scenario_SDS_solarPV = pd.read_csv(folder_raws + "scenario SDS SolarPV .csv")
-scenario_SDS_wind = pd.read_csv(folder_raws + "scenario SDS wind .csv")
-scenario_STEPS_solarPV = pd.read_csv(folder_raws + "scenario STEPS SolarPV .csv")
-scenario_STEPS_wind = pd.read_csv(folder_raws + "scenario STEPS Wind .csv")
+scenario_SDS_solarPV = pd.read_csv("scenario SDS SolarPV .csv")
+scenario_SDS_wind = pd.read_csv("scenario SDS wind .csv")
+scenario_STEPS_solarPV = pd.read_csv("scenario STEPS SolarPV .csv")
+scenario_STEPS_wind = pd.read_csv("scenario STEPS Wind .csv")
 #DataFrame Aggiunta di capacità
-aggiunta_capacità_STEPS = pd.read_csv(folder_raws + "aggiunta di capacità STEPS .csv")
-aggiunta_capacità_SDS = pd.read_csv(folder_raws + "aggiunta di capacità SDS .csv")
+aggiunta_capacità_STEPS = pd.read_csv("aggiunta di capacità STEPS .csv")
+aggiunta_capacità_SDS = pd.read_csv("aggiunta di capacità SDS .csv")
 
 #PER I PRIMI DUE GRAFICI
 
@@ -594,7 +594,7 @@ def update_graph(sector):
               )
 def update_graph(materia, valori, algoritmo, alpha1, alpha2, beta):
     # sfruttiamo i parametri e creiamo un oggetto dataframe
-    materia_df = pd.read_csv(folder_raws + materia + '.csv')
+    materia_df = pd.read_csv(materia + '.csv')
 
     # generiamo un time serie di dati, e applichiamo l'algoritmo dal 2000 in poi
     data = materia_df.loc[materia_df.Year >= 2000][f'{valori}']
