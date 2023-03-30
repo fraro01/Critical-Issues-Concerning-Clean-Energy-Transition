@@ -101,8 +101,10 @@ vento = pd.melt(vento, id_vars=['year'], value_vars=['[$] cost STEPS','[$] cost 
 # CHIAMATA PRINCIPALE
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-#VIDEO SU RENDER
+
+#QUESTA UNICA LINEA SOTTO SEGUENTE SERVE PER PUBBLICARE LA DASHBOARD SU RENDER
 server = app.server
+
 
 # STRUTTURA LAY-OUT
 
