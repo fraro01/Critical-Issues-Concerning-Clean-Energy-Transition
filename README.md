@@ -1,4 +1,4 @@
-# myrender
+# Critical Issues Concerning Clean Energy Transition
 This repository is linked to: "https://critical-materials-cella-romaggi.onrender.com",
 it is a public DashBoard made with Python and some libraries (dash, pandas, plotly, statsmodels, dash-bootstrap-components).
 It regards the two main sectors concerning renewable energy (Wind and Solar PV) and all the materials that are needed for them.\
